@@ -72,78 +72,78 @@ commitments_2020[i] = csvdata[i]["2020 Commitments"];
 }
 
 var trace1 = {
-    x: votes_2018,
-    y: msci_2021,
+    x: [votes_2018[0]],
+    y: [msci_2021[0]],
     name: '2021',
-    text: company_array,
+    text: company_array[0],
     mode: 'markers',
     marker: {
-      size: 25
+      size: 80
 
     }
 
   };
 
   var trace2 = {
-    x: votes_2017,
-    y: msci_2020,
+    x: [votes_2017[0]],
+    y: [msci_2020[0]],
     name: '2020',
-    text: company_array,
+    text: company_array[0],
     mode: 'markers',
     marker: {
-      size: 25
+      size: 80
 
     }
 
   };
 
   var trace3 = {
-    x: votes_2016,
-    y: msci_2019,
+    x: [votes_2016[0]],
+    y: [msci_2019[0]],
     name: '2019',
-    text: company_array,
+    text: company_array[0],
     mode: 'markers',
     marker: {
-      size: 25
+      size: 80
 
     }
 
   };
 
   var trace4 = {
-    x: votes_2015,
-    y: msci_2018,
+    x: [votes_2015[0]],
+    y: [msci_2018[0]],
     name: '2018',
-    text: company_array,
+    text: company_array[0],
     mode: 'markers',
     marker: {
-      size: 25
+      size: 80
 
     }
 
   };
 
   var trace5 = {
-    x: votes_2014,
-    y: msci_2017,
+    x: [votes_2014[0]],
+    y: [msci_2017[0]],
     name: '2017',
-    text: company_array,
+    text: company_array[0],
     mode: 'markers',
     marker: {
-      size: 25
+      size: 80
 
     }
 
   };
 
   var trace6 = {
-    x: votes_2013,
-    y: msci_2016,
+    x: [votes_2013[0]],
+    y: [msci_2016[0]],
     name: '2016',
-    text: company_array,
+    text: company_array[0],
     mode: 'markers',
     marker: {
-      size: 25
+      size: 80
 
     }
 
@@ -190,6 +190,198 @@ var trace1 = {
 
 Plotly.newPlot('companyplot', data, layout);
 
-//d3.selectAll("#selCompany").on("change", updatePlotly);
+
+
+
+d3.selectAll("#selCompany").on("change", updateCompany);
+
+
+function updateCompany() {
+          
+        var dropdownMenu = d3.select("#selCompany");
+         
+        var set = dropdownMenu.property("value");
+
+
+if (set === 'set1') {
+
+  trace1 = {
+    x: [votes_2018[0]],
+    y: [msci_2021[0]],
+    name: '2021',
+    text: company_array[0],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace2 = {
+    x: [votes_2017[0]],
+    y: [msci_2020[0]],
+    name: '2020',
+    text: company_array[0],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace3 = {
+    x: [votes_2016[0]],
+    y: [msci_2019[0]],
+    name: '2019',
+    text: company_array[0],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace4 = {
+    x: [votes_2015[0]],
+    y: [msci_2018[0]],
+    name: '2018',
+    text: company_array[0],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace5 = {
+    x: [votes_2014[0]],
+    y: [msci_2017[0]],
+    name: '2017',
+    text: company_array[0],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace6 = {
+    x: [votes_2013[0]],
+    y: [msci_2016[0]],
+    name: '2016',
+    text: company_array[0],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+}
+
+else if (set === 'set2') {
+
+  trace1 = {
+    x: [votes_2018[1]],
+    y: [msci_2021[1]],
+    name: '2021',
+    text: company_array[1],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace2 = {
+    x: [votes_2017[1]],
+    y: [msci_2020[1]],
+    name: '2020',
+    text: company_array[1],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace3 = {
+    x: [votes_2016[1]],
+    y: [msci_2019[1]],
+    name: '2019',
+    text: company_array[1],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace4 = {
+    x: [votes_2015[1]],
+    y: [msci_2018[1]],
+    name: '2018',
+    text: company_array[1],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace5 = {
+    x: [votes_2014[1]],
+    y: [msci_2017[1]],
+    name: '2017',
+    text: company_array[1],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace6 = {
+    x: [votes_2013[1]],
+    y: [msci_2016[1]],
+    name: '2016',
+    text: company_array[1],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+}
+
+
+
+
+
+
+
+data = [trace1,trace2,trace3,trace4,trace5,trace6]
+Plotly.newPlot('companyplot', data, layout);
+
+
+// Plotly.restyle("companyplot", "trace1", [x]);
+// Plotly.restyle("companyplot", "trace1", [y]);
+
+}
+
+
 
 });

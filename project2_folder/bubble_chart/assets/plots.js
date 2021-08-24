@@ -909,13 +909,13 @@ d3.csv("/assets/CountryESG82021.csv").then(function(csvdata) {
             y = gdp_per_cap_2020;
             //size = country_pop_2020;
             layout = { 
-              title: '2006 GDP Per Capita vs. CCPI Rating',
+              title: '2020 GDP Per Capita vs. Sustainable Competitiveness Rating',
               showlegend: false,
               height: 1800,
               width: 1800,
               xaxis: {
                 title: {
-                  text: 'CCPI Rating',
+                  text: 'Sustainable Competitiveness Rating',
                   font: {
                     family: 'Courier New, monospace',
                     size: 30,
