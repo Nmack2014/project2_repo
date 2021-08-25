@@ -206,7 +206,7 @@ function updateCompany() {
 if (set === 'set1') {
 
   trace1 = {
-    x: [votes_2018[0]],
+    x: [parseInt(votes_2018[0]) + parseInt(commitments_2018[0])],
     y: [msci_2021[0]],
     name: '2021',
     text: company_array[0],
@@ -219,7 +219,8 @@ if (set === 'set1') {
   };
 
   trace2 = {
-    x: [votes_2017[0]],
+    //x: [votes_2017[0]],
+    x: [parseInt(votes_2017[0]) + parseInt(commitments_2017[0])],
     y: [msci_2020[0]],
     name: '2020',
     text: company_array[0],
@@ -232,7 +233,7 @@ if (set === 'set1') {
   };
 
   trace3 = {
-    x: [votes_2016[0]],
+    x: [parseInt(votes_2016[0]) + parseInt(commitments_2016[0])],
     y: [msci_2019[0]],
     name: '2019',
     text: company_array[0],
@@ -245,7 +246,7 @@ if (set === 'set1') {
   };
 
   trace4 = {
-    x: [votes_2015[0]],
+    x: [parseInt(votes_2015[0]) + parseInt(commitments_2015[0])],
     y: [msci_2018[0]],
     name: '2018',
     text: company_array[0],
@@ -258,7 +259,7 @@ if (set === 'set1') {
   };
 
   trace5 = {
-    x: [votes_2014[0]],
+    x: [parseInt(votes_2014[0]) + parseInt(commitments_2014[0])],
     y: [msci_2017[0]],
     name: '2017',
     text: company_array[0],
@@ -271,7 +272,7 @@ if (set === 'set1') {
   };
 
   trace6 = {
-    x: [votes_2013[0]],
+    x: [parseInt(votes_2013[0]) + parseInt(commitments_2013[0])],
     y: [msci_2016[0]],
     name: '2016',
     text: company_array[0],
@@ -288,7 +289,7 @@ if (set === 'set1') {
 else if (set === 'set2') {
 
   trace1 = {
-    x: [votes_2018[1]],
+    x: [parseInt(votes_2018[1]) + parseInt(commitments_2018[1])],
     y: [msci_2021[1]],
     name: '2021',
     text: company_array[1],
@@ -301,7 +302,8 @@ else if (set === 'set2') {
   };
 
   trace2 = {
-    x: [votes_2017[1]],
+    //x: [votes_2017[0]],
+    x: [parseInt(votes_2017[1]) + parseInt(commitments_2017[1])],
     y: [msci_2020[1]],
     name: '2020',
     text: company_array[1],
@@ -314,7 +316,7 @@ else if (set === 'set2') {
   };
 
   trace3 = {
-    x: [votes_2016[1]],
+    x: [parseInt(votes_2016[1]) + parseInt(commitments_2016[1])],
     y: [msci_2019[1]],
     name: '2019',
     text: company_array[1],
@@ -327,7 +329,7 @@ else if (set === 'set2') {
   };
 
   trace4 = {
-    x: [votes_2015[1]],
+    x: [parseInt(votes_2015[1]) + parseInt(commitments_2015[1])],
     y: [msci_2018[1]],
     name: '2018',
     text: company_array[1],
@@ -340,7 +342,7 @@ else if (set === 'set2') {
   };
 
   trace5 = {
-    x: [votes_2014[1]],
+    x: [parseInt(votes_2014[1]) + parseInt(commitments_2014[1])],
     y: [msci_2017[1]],
     name: '2017',
     text: company_array[1],
@@ -353,10 +355,674 @@ else if (set === 'set2') {
   };
 
   trace6 = {
-    x: [votes_2013[1]],
+    x: [parseInt(votes_2013[1]) + parseInt(commitments_2013[1])],
     y: [msci_2016[1]],
     name: '2016',
     text: company_array[1],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+}
+
+else if (set === 'set3') {
+
+  trace1 = {
+    x: [parseInt(votes_2018[2]) + parseInt(commitments_2018[2])],
+    y: [msci_2021[2]],
+    name: '2021',
+    text: company_array[2],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace2 = {
+    //x: [votes_2017[0]],
+    x: [parseInt(votes_2017[2]) + parseInt(commitments_2017[2])],
+    y: [msci_2020[2]],
+    name: '2020',
+    text: company_array[2],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace3 = {
+    x: [parseInt(votes_2016[2]) + parseInt(commitments_2016[2])],
+    y: [msci_2019[2]],
+    name: '2019',
+    text: company_array[2],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace4 = {
+    x: [parseInt(votes_2015[2]) + parseInt(commitments_2015[2])],
+    y: [msci_2018[2]],
+    name: '2018',
+    text: company_array[2],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace5 = {
+    x: [parseInt(votes_2014[2]) + parseInt(commitments_2014[2])],
+    y: [msci_2017[2]],
+    name: '2017',
+    text: company_array[2],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace6 = {
+    x: [parseInt(votes_2013[2]) + parseInt(commitments_2013[2])],
+    y: [msci_2016[2]],
+    name: '2016',
+    text: company_array[2],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+}
+
+else if (set === 'set4') {
+
+  trace1 = {
+    x: [parseInt(votes_2018[3]) + parseInt(commitments_2018[3])],
+    y: [msci_2021[3]],
+    name: '2021',
+    text: company_array[3],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace2 = {
+    //x: [votes_2017[0]],
+    x: [parseInt(votes_2017[3]) + parseInt(commitments_2017[3])],
+    y: [msci_2020[3]],
+    name: '2020',
+    text: company_array[3],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace3 = {
+    x: [parseInt(votes_2016[3]) + parseInt(commitments_2016[3])],
+    y: [msci_2019[3]],
+    name: '2019',
+    text: company_array[3],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace4 = {
+    x: [parseInt(votes_2015[3]) + parseInt(commitments_2015[3])],
+    y: [msci_2018[3]],
+    name: '2018',
+    text: company_array[3],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace5 = {
+    x: [parseInt(votes_2014[3]) + parseInt(commitments_2014[3])],
+    y: [msci_2017[3]],
+    name: '2017',
+    text: company_array[3],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace6 = {
+    x: [parseInt(votes_2013[3]) + parseInt(commitments_2013[3])],
+    y: [msci_2016[3]],
+    name: '2016',
+    text: company_array[3],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+}
+
+else if (set === 'set5') {
+
+  trace1 = {
+    x: [parseInt(votes_2018[4]) + parseInt(commitments_2018[4])],
+    y: [msci_2021[4]],
+    name: '2021',
+    text: company_array[4],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace2 = {
+    //x: [votes_2017[0]],
+    x: [parseInt(votes_2017[4]) + parseInt(commitments_2017[4])],
+    y: [msci_2020[4]],
+    name: '2020',
+    text: company_array[4],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace3 = {
+    x: [parseInt(votes_2016[4]) + parseInt(commitments_2016[4])],
+    y: [msci_2019[4]],
+    name: '2019',
+    text: company_array[4],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace4 = {
+    x: [parseInt(votes_2015[4]) + parseInt(commitments_2015[4])],
+    y: [msci_2018[4]],
+    name: '2018',
+    text: company_array[4],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace5 = {
+    x: [parseInt(votes_2014[4]) + parseInt(commitments_2014[4])],
+    y: [msci_2017[4]],
+    name: '2017',
+    text: company_array[4],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace6 = {
+    x: [parseInt(votes_2013[4]) + parseInt(commitments_2013[4])],
+    y: [msci_2016[4]],
+    name: '2016',
+    text: company_array[4],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+}
+
+else if (set === 'set6') {
+
+  trace1 = {
+    x: [parseInt(votes_2018[5]) + parseInt(commitments_2018[5])],
+    y: [msci_2021[5]],
+    name: '2021',
+    text: company_array[5],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace2 = {
+    //x: [votes_2017[0]],
+    x: [parseInt(votes_2017[5]) + parseInt(commitments_2017[5])],
+    y: [msci_2020[5]],
+    name: '2020',
+    text: company_array[5],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace3 = {
+    x: [parseInt(votes_2016[5]) + parseInt(commitments_2016[5])],
+    y: [msci_2019[5]],
+    name: '2019',
+    text: company_array[5],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace4 = {
+    x: [parseInt(votes_2015[5]) + parseInt(commitments_2015[5])],
+    y: [msci_2018[5]],
+    name: '2018',
+    text: company_array[5],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace5 = {
+    x: [parseInt(votes_2014[5]) + parseInt(commitments_2014[5])],
+    y: [msci_2017[5]],
+    name: '2017',
+    text: company_array[5],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace6 = {
+    x: [parseInt(votes_2013[5]) + parseInt(commitments_2013[5])],
+    y: [msci_2016[5]],
+    name: '2016',
+    text: company_array[5],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+}
+
+else if (set === 'set7') {
+
+  trace1 = {
+    x: [parseInt(votes_2018[6]) + parseInt(commitments_2018[6])],
+    y: [msci_2021[6]],
+    name: '2021',
+    text: company_array[6],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace2 = {
+    //x: [votes_2017[0]],
+    x: [parseInt(votes_2017[6]) + parseInt(commitments_2017[6])],
+    y: [msci_2020[6]],
+    name: '2020',
+    text: company_array[6],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace3 = {
+    x: [parseInt(votes_2016[6]) + parseInt(commitments_2016[6])],
+    y: [msci_2019[6]],
+    name: '2019',
+    text: company_array[6],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace4 = {
+    x: [parseInt(votes_2015[6]) + parseInt(commitments_2015[6])],
+    y: [msci_2018[6]],
+    name: '2018',
+    text: company_array[6],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace5 = {
+    x: [parseInt(votes_2014[6]) + parseInt(commitments_2014[6])],
+    y: [msci_2017[6]],
+    name: '2017',
+    text: company_array[6],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace6 = {
+    x: [parseInt(votes_2013[6]) + parseInt(commitments_2013[6])],
+    y: [msci_2016[6]],
+    name: '2016',
+    text: company_array[6],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+}
+
+else if (set === 'set8') {
+
+  trace1 = {
+    x: [parseInt(votes_2018[7]) + parseInt(commitments_2018[7])],
+    y: [msci_2021[7]],
+    name: '2021',
+    text: company_array[7],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace2 = {
+    //x: [votes_2017[0]],
+    x: [parseInt(votes_2017[7]) + parseInt(commitments_2017[7])],
+    y: [msci_2020[7]],
+    name: '2020',
+    text: company_array[7],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace3 = {
+    x: [parseInt(votes_2016[7]) + parseInt(commitments_2016[7])],
+    y: [msci_2019[7]],
+    name: '2019',
+    text: company_array[7],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace4 = {
+    x: [parseInt(votes_2015[7]) + parseInt(commitments_2015[7])],
+    y: [msci_2018[7]],
+    name: '2018',
+    text: company_array[7],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace5 = {
+    x: [parseInt(votes_2014[7]) + parseInt(commitments_2014[7])],
+    y: [msci_2017[7]],
+    name: '2017',
+    text: company_array[7],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace6 = {
+    x: [parseInt(votes_2013[7]) + parseInt(commitments_2013[7])],
+    y: [msci_2016[7]],
+    name: '2016',
+    text: company_array[7],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+}
+
+else if (set === 'set9') {
+
+  trace1 = {
+    x: [parseInt(votes_2018[8]) + parseInt(commitments_2018[8])],
+    y: [msci_2021[8]],
+    name: '2021',
+    text: company_array[8],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace2 = {
+    //x: [votes_2017[0]],
+    x: [parseInt(votes_2017[8]) + parseInt(commitments_2017[8])],
+    y: [msci_2020[8]],
+    name: '2020',
+    text: company_array[8],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace3 = {
+    x: [parseInt(votes_2016[8]) + parseInt(commitments_2016[8])],
+    y: [msci_2019[8]],
+    name: '2019',
+    text: company_array[8],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace4 = {
+    x: [parseInt(votes_2015[8]) + parseInt(commitments_2015[8])],
+    y: [msci_2018[8]],
+    name: '2018',
+    text: company_array[8],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace5 = {
+    x: [parseInt(votes_2014[8]) + parseInt(commitments_2014[8])],
+    y: [msci_2017[8]],
+    name: '2017',
+    text: company_array[8],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace6 = {
+    x: [parseInt(votes_2013[8]) + parseInt(commitments_2013[8])],
+    y: [msci_2016[8]],
+    name: '2016',
+    text: company_array[8],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+}
+
+else if (set === 'set10') {
+
+  trace1 = {
+    x: [parseInt(votes_2018[9]) + parseInt(commitments_2018[9])],
+    y: [msci_2021[9]],
+    name: '2021',
+    text: company_array[9],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace2 = {
+    //x: [votes_2017[0]],
+    x: [parseInt(votes_2017[9]) + parseInt(commitments_2017[9])],
+    y: [msci_2020[9]],
+    name: '2020',
+    text: company_array[9],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace3 = {
+    x: [parseInt(votes_2016[9]) + parseInt(commitments_2016[9])],
+    y: [msci_2019[9]],
+    name: '2019',
+    text: company_array[9],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace4 = {
+    x: [parseInt(votes_2015[9]) + parseInt(commitments_2015[9])],
+    y: [msci_2018[9]],
+    name: '2018',
+    text: company_array[9],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace5 = {
+    x: [parseInt(votes_2014[9]) + parseInt(commitments_2014[9])],
+    y: [msci_2017[9]],
+    name: '2017',
+    text: company_array[9],
+    mode: 'markers',
+    marker: {
+      size: 80
+
+    }
+
+  };
+
+  trace6 = {
+    x: [parseInt(votes_2013[9]) + parseInt(commitments_2013[9])],
+    y: [msci_2016[9]],
+    name: '2016',
+    text: company_array[9],
     mode: 'markers',
     marker: {
       size: 80
@@ -373,7 +1039,14 @@ else if (set === 'set2') {
 
 
 
-data = [trace1,trace2,trace3,trace4,trace5,trace6]
+
+
+
+
+
+
+
+data = [trace1, trace2, trace3, trace4, trace5, trace6]
 Plotly.newPlot('companyplot', data, layout);
 
 
